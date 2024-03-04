@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kado Ulang Tahun</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f7ecd7;
+        padding: 20px;
+      }
+      #card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        width: 60%;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #ffb8c6;
+      }
+      p {
+        color: #ffb8c6;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 5px;
+        transition: transform 0.5s ease;
+      }
+      img:hover {
+        transform: scale(1.1);
+      }
+      #gallery {
+        display: none;
+      }
+      #showGallery {
+        background-color: #ffb8c6;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      #galleryImages {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+      }
+      #galleryImages img {
+        width: 200px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card">
+      <h1>Selamat Ulang Tahun, Sayang!</h1>
+      <p>Hari ini adalah hari spesialmu!</p>
+      <p>Aku ingin mengucapkan selamat ulang tahun yang ke-</p>
+      <h2>23</h2>
+      <p>Semoga hari ulang tahunmu penuh dengan kebahagiaan dan cinta.</p>
+      <img
+        id="mainImage"
+        src="14.png"
+        alt="Kado"
+        onclick="celebrationEffect()"
+      />
+      <p>Happy Birthday!</p>
+      <button id="showGallery" onclick="showGallery()">
+        Tampilkan Foto Kebahagiaan
+      </button>
+      <div id="gallery">
+        <div id="galleryImages">
+          <img src="1.png" alt="Foto Kebahagiaan 1" />
+          <img src="2.png" alt="Foto Kebahagiaan 2" />
+          <img src="3.png" alt="Foto Kebahagiaan 3" />
+          <img src="4.png" alt="Foto Kebahagiaan 4" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function celebrationEffect() {
+        var mainImage = document.getElementById("mainImage");
+        mainImage.classList.add("celebrate");
+        setTimeout(function () {
+          mainImage.classList.remove("celebrate");
+        }, 1000);
+      }
+
+      function showGallery() {
+        var gallery = document.getElementById("gallery");
+        gallery.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
